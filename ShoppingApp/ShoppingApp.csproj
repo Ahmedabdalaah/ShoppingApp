@@ -21,7 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Report\Controllers\" />
     <Folder Include="Areas\Report\Data\" />
+    <Folder Include="Areas\Report\Views\" />
   </ItemGroup>
 
 </Project>
