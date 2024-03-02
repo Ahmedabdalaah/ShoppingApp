@@ -1,0 +1,48 @@
+﻿﻿
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+@if (TempData["succesData"] != null)
+{
+    <h2 style="color:green;">
+        @TempData["succesData"]
+    </h2>
+    <script type="text/javascript">
+        toastr.success('@TempData["succesData"]', 'success')
+    </script>
+}
+@if (TempData["successUp"] != null)
+{
+    <h2 style="color:green;">
+        @TempData["successUp"]
+    </h2>
+    <script type="text/javascript">
+        toastr.success('@TempData["successUp"]', 'success')
+    </script>
+}
+@if (TempData["successDel"] != null)
+{
+    <h2 style="color:green;">
+        @TempData["successDel"]
+    </h2>
+    <script type="text/javascript">
+        toastr.success('@TempData["successDel"]', 'success')
+    </script>
+}
+@if (TempData["successCat"] != null)
+{
+    <h2 style="color:green;">
+        @TempData["successCat"]
+    </h2>
+    <script type="text/javascript">
+        toastr.success('@TempData["successCat"]', 'success')
+    </script>
+}
+
+@if (TempData["ErrorData"] != null)
+{
+    <h2 style="color:red;">
+        @TempData["failData"]
+    </h2>
+}
