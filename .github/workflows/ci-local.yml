@@ -2,7 +2,7 @@ name: CI Local Build
 
 on:
   push:
-    branches: [ "master" ]   # يشتغل مع أي Push على فرع main
+    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
@@ -17,7 +17,7 @@ jobs:
     - name: 🔹 تثبيت .NET SDK
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 8.0.x   # غيّرها حسب الـ SDK اللي انت شغال بيه
+        dotnet-version: 8.0.x
 
     - name: 🔹 Restore Packages
       run: dotnet restore
@@ -28,8 +28,8 @@ jobs:
     - name: 🔹 Run Tests
       run: dotnet test --no-build --verbosity normal
 
-    - name: 🔹 تثبيت Docker (لو مش موجود في الـ Runner)
-      run: sudo apt-get install -y docker.io
+    # - name: 🔹 تثبيت Docker (لو مش موجود في الـ Runner)
+    #   run: sudo apt-get install -y docker.io
 
     - name: 🔹 Build Docker Image Locally
       run: docker build -t shoppingapp:ci .
