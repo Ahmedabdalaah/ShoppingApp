@@ -2,9 +2,9 @@ name: CI Local Build
 
 on:
   push:
-    branches: [ "main" ]   # يشتغل مع أي Push على فرع main
+    branches: [ "master" ]   # يشتغل مع أي Push على فرع main
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build:
